@@ -465,7 +465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7, y: -24.743683}
+  m_AnchoredPosition: {x: 7, y: -24.743652}
   m_SizeDelta: {x: 604.5032, y: 249.1534}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553890151
@@ -540,7 +540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7, y: -24.743683}
+  m_AnchoredPosition: {x: 7, y: -24.743652}
   m_SizeDelta: {x: 604.5032, y: 249.1534}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800048784
@@ -981,7 +981,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5522,12 +5522,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459715295}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -110.1, y: 262.28766, z: -6.5554395}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -1065.1, y: -334.71234, z: -6.5554395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1732580889}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1732580885
 GameObject:
@@ -5623,6 +5623,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1459715298}
   - {fileID: 800048783}
   - {fileID: 1913580547}
   - {fileID: 553890150}
@@ -5762,7 +5763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7, y: -24.743683}
+  m_AnchoredPosition: {x: 7, y: -24.743652}
   m_SizeDelta: {x: 604.5032, y: 249.1534}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913580548
@@ -5810,4 +5811,3 @@ SceneRoots:
   - {fileID: 1792359569}
   - {fileID: 1732580889}
   - {fileID: 452522136}
-  - {fileID: 1459715298}
