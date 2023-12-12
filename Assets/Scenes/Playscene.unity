@@ -322,9 +322,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 389129982}
+  - component: {fileID: 389129984}
   - component: {fileID: 389129981}
   - component: {fileID: 389129983}
-  - component: {fileID: 389129984}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -420,9 +420,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 389129980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb4406e4ea3b4d78bd66fd0e91c0a1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 94313d5ebf7f8450e93272fcf567ff4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fish: 0
 --- !u!1 &708025028
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +434,9 @@ GameObject:
   m_Component:
   - component: {fileID: 708025030}
   - component: {fileID: 708025031}
+  - component: {fileID: 708025033}
   - component: {fileID: 708025029}
+  - component: {fileID: 708025032}
   m_Layer: 0
   m_Name: RedFish
   m_TagString: Fish
@@ -502,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 708025028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.99, y: 0, z: -0.10081497}
+  m_LocalPosition: {x: -7.13, y: 2.92, z: -0.10081497}
   m_LocalScale: {x: 0.7923732, y: 0.62628394, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -521,6 +524,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+--- !u!61 &708025032
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708025028}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28}
+  m_EdgeRadius: 0
+--- !u!114 &708025033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708025028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94313d5ebf7f8450e93272fcf567ff4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish: 0
 --- !u!1 &780436547
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +760,7 @@ Transform:
   m_GameObject: {fileID: 1950819180}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.64, y: 1.19, z: -0.10081497}
+  m_LocalPosition: {x: 7.69, y: 1.01, z: -0.10081497}
   m_LocalScale: {x: 0.8131334, y: 0.62628394, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
