@@ -7,7 +7,7 @@ public class Singleton : MonoBehaviour
 {
     public static Singleton singleton;
     
-    public int gold = 0;
+    public double gold = 0;
     public int depthUprage = 1;
     public int cashUpgrade = 1;
     public int spawnUpgrade = 1;
