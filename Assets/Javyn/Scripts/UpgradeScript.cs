@@ -113,7 +113,14 @@ public class UpgradeScript : MonoBehaviour
     {
         if (canSwitch)
         {
-            selectedIndex = (selectedIndex + direction) % buttons.Length;
+            if (selectedIndex + direction == -1)
+            {
+                selectedIndex = 3;
+            }
+            else
+            {
+                selectedIndex = (selectedIndex + direction) % buttons.Length;
+            }
             canSwitch = false;
             yield return new WaitForSeconds(0.5f);
             canSwitch = true;
