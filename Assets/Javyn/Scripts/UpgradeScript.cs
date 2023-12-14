@@ -81,6 +81,7 @@ public class UpgradeScript : MonoBehaviour
 
     void Return()
     {
+        singleton.goToStart += 1;
         thirdSource.Play();
     }
 
