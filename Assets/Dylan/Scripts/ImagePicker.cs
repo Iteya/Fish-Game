@@ -23,6 +23,10 @@ public class ImagePicker : MonoBehaviour
         {
             int num = UnityEngine.Random.Range(4, 7);
             Image.sprite = images[num];
+        }else if (transform.position.x > 200)
+        {
+            int num = UnityEngine.Random.Range(0, 3);
+            Image.sprite = images[num];
         }
 
         if (transform.position.y == 0)
