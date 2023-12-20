@@ -1,12 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 public class FishCollect : MonoBehaviour
 {
     // Start is called before the first frame update
     public int fish;
+    public GameObject fishes;
+    public float range;
     void Start()
     {
         
@@ -15,16 +20,6 @@ public class FishCollect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (gameObject.CompareTag("Fish"))
-        {
-            Destroy(this.gameObject);
-            fish += 1;
-            Debug.Log("Fish Collected");
-        }
+        Instantiate(fishes, new Vector3(Random.Range(-9.4f, 9.0f), -4, 0), quaternion.identity);
     }
 }
