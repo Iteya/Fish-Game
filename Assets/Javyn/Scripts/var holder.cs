@@ -16,7 +16,7 @@ public class varholder : MonoBehaviour
     {
         string costString = cost.ToString();
         display.text = "cost: " + costString;
-        if (singleton.gold < cost)
+        if (Singleton.Instance.gold < cost)
         {
             display.color = Color.red;
         }

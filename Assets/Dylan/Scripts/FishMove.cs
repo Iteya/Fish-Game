@@ -21,8 +21,14 @@ public class FishMove : MonoBehaviour
         images[3] = image4;
         int num = Random.Range(0, 3);
         self.GetComponent<SpriteRenderer>().sprite = images[num];
-        transform.rotation = new Quaternion(0, 0, 0.08716f, 0.99618f);
-        Debug.Log(transform.rotation);
+        if (transform.position.x > 0)
+        {
+            direction = -1;
+        }
+        else
+        {
+            direction = 1;
+        }
     }
 
     // Update is called once per frame
@@ -31,14 +37,24 @@ public class FishMove : MonoBehaviour
         if (transform.position.x < -9.4f)
         {
             direction = 1;
-            transform.localScale = new Vector3(0.75f, 0.75f, 1);
         }
 
         if (transform.position.x > 9)
         {
             direction = -1;
+        }
+
+        if (direction >= 1)
+        {
+            transform.rotation = new Quaternion(0, 0, 0.08716f, 0.99618f);
+            transform.localScale = new Vector3(0.75f, 0.75f, 1);
+        }
+        if (direction <= -1)
+        {
+            transform.rotation = new Quaternion(0, 0, -0.08716f, 0.99619f);
             transform.localScale = new Vector3(-0.75f, 0.75f, 1);
         }
+
         transform.Translate(new Vector2(1f * Time.deltaTime * direction, 0.1f * Time.deltaTime));
     }
 }
