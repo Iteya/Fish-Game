@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -34,12 +35,12 @@ public class FishMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -9.4f)
+        if (transform.position.x < -8.5f)
         {
             direction = 1;
         }
 
-        if (transform.position.x > 9)
+        if (transform.position.x > 8.5)
         {
             direction = -1;
         }
@@ -56,5 +57,17 @@ public class FishMove : MonoBehaviour
         }
 
         transform.Translate(new Vector2(1f * Time.deltaTime * direction, 0.1f * Time.deltaTime));
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Why won't it work?");
+        if (direction == -1)
+        {
+            direction = 1;
+        } else if (direction == -1)
+        {
+            direction = 1;
+        }
     }
 }

@@ -10,6 +10,8 @@ public class SquareMove : MonoBehaviour
     private bool canClonex = true;
     private bool canCloney = true;
     [SerializeField] private GameObject self;
+
+    public float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,8 @@ public class SquareMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector2(Input.GetAxis("Horizontal") * -2 * Time.deltaTime, speed * Time.deltaTime));
+        timer += 1 * Time.deltaTime;
+        transform.Translate(new Vector2(Input.GetAxis("Horizontal") * -6 * Time.deltaTime, speed * Time.deltaTime));
 
         if (transform.position.y > 199 && canClonex)
         {
@@ -26,16 +29,19 @@ public class SquareMove : MonoBehaviour
             canClonex = false;
         }
 
-        if (transform.position.x >= 190)
+        if (transform.position.x >= 818)
         {
-            Instantiate(self, new Vector2(-219, transform.position.y), quaternion.identity);
-            canCloney = false;
+            transform.position = new Vector2(409, transform.position.y);
         }
 
-        if (transform.position.x <= -190)
+        if (transform.position.x <= -818)
         {
-            Instantiate(self, new Vector2(219, transform.position.y), quaternion.identity);
-            canCloney = false;
+            transform.position = new Vector2(409, transform.position.y);
+        }
+
+        if (timer > 5000)
+        {
+            Destroy(self);
         }
     }
 }

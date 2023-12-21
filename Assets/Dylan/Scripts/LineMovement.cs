@@ -34,14 +34,14 @@ public class LineMovement : MonoBehaviour
             transform.Translate(new Vector2(0, yGravity * Time.deltaTime));
         }
 
-        if (transform.position.x >= -9)
+        if (transform.position.x >= -8)
         {
             if (xDirection < 0)
             {
                 transform.Translate(new Vector3(xDirection, 0, 0));
             }
         } 
-        if (transform.position.x <= 9)
+        if (transform.position.x <= 8)
         {
             if (xDirection > 0)
             {
