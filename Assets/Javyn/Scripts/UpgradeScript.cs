@@ -11,7 +11,7 @@ public class UpgradeScript : MonoBehaviour
     public double firstCost;
     public double secondCost;
     public double thirdCost;
-    public Singleton singleton;
+    public Singleton singleton = Singleton.Instance;
     public Button[] buttons;
     private int selectedIndex = 0;
     private bool canSwitch = true;
@@ -36,10 +36,10 @@ public class UpgradeScript : MonoBehaviour
 
     void FishUpgrade()
     {
-        if (singleton.gold >= FirstButton.GetComponent<varholder>().cost)
+        if (Singleton.Instance.gold >= FirstButton.GetComponent<varholder>().cost)
         {
-            singleton.spawnUpgrade += 1;
-            singleton.gold -= FirstButton.GetComponent<varholder>().cost;
+            Singleton.Instance.spawnUpgrade += 1;
+            Singleton.Instance.gold -= FirstButton.GetComponent<varholder>().cost;
             firstCost = Math.Floor((firstCost * 1.2) + 1);
             Singleton.Instance.spawnCost = firstCost;
             firstSource.Play();
@@ -52,10 +52,10 @@ public class UpgradeScript : MonoBehaviour
 
     void CoinUpgrade()
     {
-        if (singleton.gold >= SecondButton.GetComponent<varholder>().cost)
+        if (Singleton.Instance.gold >= SecondButton.GetComponent<varholder>().cost)
         {
-            singleton.cashUpgrade += 1;
-            singleton.gold -= SecondButton.GetComponent<varholder>().cost;
+            Singleton.Instance.cashUpgrade += 1;
+            Singleton.Instance.gold -= SecondButton.GetComponent<varholder>().cost;
             secondCost = Math.Floor((secondCost * 1.2) + 1);
             Singleton.Instance.cashCost = secondCost;
             secondSource.Play();
@@ -68,10 +68,10 @@ public class UpgradeScript : MonoBehaviour
 
     void DepthUpgrade()
     {
-        if (singleton.gold >= ThirdButton.GetComponent<varholder>().cost)
+        if (Singleton.Instance.gold >= ThirdButton.GetComponent<varholder>().cost)
         {
-            singleton.depthUprage += 1;
-            singleton.gold -= ThirdButton.GetComponent<varholder>().cost;
+            Singleton.Instance.depthUprage += 1;
+            Singleton.Instance.gold -= ThirdButton.GetComponent<varholder>().cost;
             thirdCost = Math.Floor((thirdCost * 1.2) + 1);
             Singleton.Instance.depthCost = thirdCost;
             thirdSource.Play();
@@ -84,7 +84,7 @@ public class UpgradeScript : MonoBehaviour
 
     void Return()
     {
-        singleton.goToStart += 1;
+        Singleton.Instance.goToStart += 1;
         thirdSource.Play();
     }
 
@@ -125,7 +125,7 @@ public class UpgradeScript : MonoBehaviour
                 selectedIndex = (selectedIndex + direction) % buttons.Length;
             }
             canSwitch = false;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
             canSwitch = true;
         }
     }

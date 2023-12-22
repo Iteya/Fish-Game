@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Singleton : MonoBehaviour
 {
-    public static Singleton singleton;
+    public static Singleton Instance;
     
     public double gold = 0;
     public int depthUprage = 1;
@@ -18,13 +18,13 @@ public class Singleton : MonoBehaviour
     public double spawnCost = 15;
     private void Awake()
     {
-        if (singleton != null && singleton != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
         }
         else
         {
-            singleton = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         } 
     }
@@ -34,7 +34,7 @@ public class Singleton : MonoBehaviour
         if (goToStart > 1)
         {
             goToStart = 1;
-            SceneManager.LoadScene("Fishing");
+            SceneManager.LoadScene("Playscene");
         }
     }
 }
