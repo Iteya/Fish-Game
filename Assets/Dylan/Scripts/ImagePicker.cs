@@ -29,26 +29,15 @@ public class ImagePicker : MonoBehaviour
             Image.sprite = images[num];
         }
 
-        
-        
+        if (transform.position.y == 0)
+        {
+            //Instantiate()
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y + (100 * Time.deltaTime), transform.position.z);
-        if (transform.position.y >= 1200)
-        {
-            transform.position = new Vector2(transform.position.x, -100);
-            if (transform.position.x < 100)
-            {
-                int num = UnityEngine.Random.Range(4, 7);
-                Image.sprite = images[num];
-            }else if (transform.position.x > 200)
-            {
-                int num = UnityEngine.Random.Range(0, 3);
-                Image.sprite = images[num];
-            }
-        }
+        
     }
 }

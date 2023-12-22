@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Fish
   - Trigger
-  - Singleton
   layers:
   - Default
   - TransparentFX
