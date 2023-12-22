@@ -52,7 +52,7 @@ public class LineMovement : MonoBehaviour
             transform.Translate(new Vector2(0, 5 * Time.deltaTime));
             if (transform.position.y > 9.5)
             {
-                SceneManager.LoadScene("Shop");
+                SceneManager.LoadScene("NewShop");
             }
         }
         if (Input.GetAxis("Buttons1") != 0 || Input.GetAxis("Buttons2") != 0)

@@ -16,6 +16,7 @@ public class Singleton : MonoBehaviour
     public double depthCost = 10;
     public double cashCost = 20;
     public double spawnCost = 15;
+    public bool show1, show2, show3, show4, show5, show6, show7, show8, show9 = false;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -35,6 +36,42 @@ public class Singleton : MonoBehaviour
         {
             goToStart = 1;
             SceneManager.LoadScene("Playscene");
+        }
+        if (gold > 10)
+        {
+            show1 = true;
+        }
+        if (gold > 50)
+        {
+            show2 = true;
+        }
+        if (gold > 100)
+        {
+            show3 = true;
+        }
+        if (gold > 500)
+        {
+            show4 = true;
+        }
+        if (gold > 1000)
+        {
+            show5 = true;
+        }
+        if (gold > 1500)
+        {
+            show6 = true;
+        }
+        if (gold > 3000)
+        {
+            show7 = true;
+        }
+        if (gold > 5000)
+        {
+            show8 = true;
+        }
+        if (gold > 10000)
+        {
+            show9 = true;
         }
     }
 }

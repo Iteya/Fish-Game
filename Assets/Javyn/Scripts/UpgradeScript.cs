@@ -29,7 +29,7 @@ public class UpgradeScript : MonoBehaviour
         SecondButton.onClick.AddListener(CoinUpgrade);
         ThirdButton.onClick.AddListener(DepthUpgrade);
         ReturnButton.onClick.AddListener(Return);
-        firstCost = Singleton.Instance.spawnCost;
+         firstCost = Singleton.Instance.spawnCost;
         secondCost = Singleton.Instance.cashCost;
         thirdCost = Singleton.Instance.depthCost;
     }
