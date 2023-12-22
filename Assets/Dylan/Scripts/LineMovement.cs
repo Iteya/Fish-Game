@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -50,14 +46,27 @@ public class LineMovement : MonoBehaviour
         }
 
         depth += 1 * Time.deltaTime;
-
-        if (depth >= Singleton.Instance.depthUprage * 5 + 30 || Input.GetAxis("Buttons1") != 0|| Input.GetAxis("Buttons2") != 0)
+         
+        if (depth >= Singleton.Instance.depthUprage * 5 + 30)
         {
             transform.Translate(new Vector2(0, 5 * Time.deltaTime));
             if (transform.position.y > 9.5)
             {
                 SceneManager.LoadScene("Shop");
             }
+        }
+        if (Input.GetAxis("Buttons1") != 0 || Input.GetAxis("Buttons2") != 0)
+        {
+            transform.Translate(new Vector2(0, -2 * Time.deltaTime));
+        }
+
+        if (transform.position.y < 2.5)
+        {
+            transform.Translate(new Vector2(0, 1 * Time.deltaTime));
+        }
+        if (transform.position.y < .5)
+        {
+            transform.Translate(new Vector2(0, 1 * Time.deltaTime));
         }
 
 
@@ -67,7 +76,7 @@ public class LineMovement : MonoBehaviour
     {
         Destroy(other.gameObject);
         self.GetComponent<FishCollect>().fish -= 1;
-        Singleton.Instance.gold += Mathf.Round(1 * (cashUpgrades / 10) + 1);
+        Singleton.Instance.gold += Mathf.Round(1 * (cashUpgrades / 2) + 1);
         bite.Play();
     }
 }

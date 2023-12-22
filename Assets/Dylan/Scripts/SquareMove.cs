@@ -8,7 +8,6 @@ public class SquareMove : MonoBehaviour
 {
     [SerializeField] private int speed;
     private bool canClonex = true;
-    private bool canCloney = true;
     [SerializeField] private GameObject self;
 
     public float timer = 0;
