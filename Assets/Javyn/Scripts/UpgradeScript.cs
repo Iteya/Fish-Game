@@ -29,9 +29,9 @@ public class UpgradeScript : MonoBehaviour
         SecondButton.onClick.AddListener(CoinUpgrade);
         ThirdButton.onClick.AddListener(DepthUpgrade);
         ReturnButton.onClick.AddListener(Return);
-        firstCost = FirstButton.GetComponent<varholder>().cost;
-        secondCost = SecondButton.GetComponent<varholder>().cost;
-        thirdCost = ThirdButton.GetComponent<varholder>().cost;
+        firstCost = Singleton.Instance.spawnCost;
+        secondCost = Singleton.Instance.cashCost;
+        thirdCost = Singleton.Instance.depthCost;
     }
 
     void FishUpgrade()
@@ -41,6 +41,7 @@ public class UpgradeScript : MonoBehaviour
             Singleton.Instance.spawnUpgrade += 1;
             Singleton.Instance.gold -= FirstButton.GetComponent<varholder>().cost;
             firstCost = Math.Floor((firstCost * 1.2) + 1);
+            Singleton.Instance.spawnCost = firstCost;
             firstSource.Play();
         }
         else
@@ -56,6 +57,7 @@ public class UpgradeScript : MonoBehaviour
             Singleton.Instance.cashUpgrade += 1;
             Singleton.Instance.gold -= SecondButton.GetComponent<varholder>().cost;
             secondCost = Math.Floor((secondCost * 1.2) + 1);
+            Singleton.Instance.cashCost = secondCost;
             secondSource.Play();
         }
         else
@@ -71,6 +73,7 @@ public class UpgradeScript : MonoBehaviour
             Singleton.Instance.depthUprage += 1;
             Singleton.Instance.gold -= ThirdButton.GetComponent<varholder>().cost;
             thirdCost = Math.Floor((thirdCost * 1.2) + 1);
+            Singleton.Instance.depthCost = thirdCost;
             thirdSource.Play();
         }
         else

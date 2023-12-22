@@ -13,6 +13,9 @@ public class Singleton : MonoBehaviour
     public int cashUpgrade = 1;
     public int spawnUpgrade = 1;
     public int goToStart = 1;
+    public double depthCost = 10;
+    public double cashCost = 20;
+    public double spawnCost = 15;
     private void Awake()
     {
         if (Instance != null && Instance != this)
