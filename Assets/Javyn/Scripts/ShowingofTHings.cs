@@ -8,6 +8,12 @@ public class ShowingofTHings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Singleton.Instance.show1)
         {
             object1.SetActive(true);
@@ -44,11 +50,5 @@ public class ShowingofTHings : MonoBehaviour
         {
             object9.SetActive(true);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
