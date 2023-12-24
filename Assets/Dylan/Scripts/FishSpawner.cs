@@ -14,8 +14,8 @@ public class FishCollect : MonoBehaviour
     public GameObject singleton;
     public bool playing = true;
     public float maxFish;
-    public float xSpawning;
-    public float ySpawning;
+    public float xSpawning = Random.Range(-9.4f, 9.0f);
+    public float ySpawning = Random.Range(-5, -9);
     public float fishTimer;
     void Start()
     {

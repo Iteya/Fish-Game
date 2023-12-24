@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5403463930770854681}
   - component: {fileID: 3772451800276581588}
   - component: {fileID: 4113301250996100929}
+  - component: {fileID: 2931621120702862344}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Fish
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.13, y: -4, z: -0.10081497}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,10 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcb2932ff61d4eaaaa7f1bf4fed1be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image1: {fileID: 21300000, guid: 1374cd44fca0f481782b63deab903fe7, type: 3}
-  image2: {fileID: 21300000, guid: a97ddb26e9d5c410e8c5d0c4f2c4e4ec, type: 3}
-  image3: {fileID: 21300000, guid: 1ec5c965e83504060b5a72874125e62d, type: 3}
-  image4: {fileID: 21300000, guid: 5871cea9b24a346f7a22e752acb5ec74, type: 3}
+  image1: {fileID: -1383208731, guid: 9208a44bb045c41f88dc586ce6ba7d45, type: 3}
+  image2: {fileID: 2036973984, guid: 9cc75b4acb6104a8581c880d91d33ea6, type: 3}
+  image3: {fileID: 1526654618, guid: 018faf63f29ad4003814fc9dab3ca89a, type: 3}
+  image4: {fileID: 2060199423, guid: cff1e67d98ebb43eda5d06616e883d7d, type: 3}
+  image5: {fileID: 21300000, guid: 45b92e9223321f1418ac4b193008648b, type: 3}
   direction: 0
   self: {fileID: 684167882040288745}
 --- !u!212 &5403463930770854681
@@ -94,7 +96,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1ec5c965e83504060b5a72874125e62d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45b92e9223321f1418ac4b193008648b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,18 +139,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.017047584, y: -0.01515317}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 0.48, y: 0.48}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 0.25336325, y: 0.1359253}
   m_EdgeRadius: 0
 --- !u!50 &4113301250996100929
 Rigidbody2D:
@@ -177,3 +179,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &2931621120702862344
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684167882040288745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c88cd07e4999e7b46bf31877970a928c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

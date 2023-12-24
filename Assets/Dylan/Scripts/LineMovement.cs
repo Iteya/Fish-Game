@@ -55,6 +55,15 @@ public class LineMovement : MonoBehaviour
                 SceneManager.LoadScene("Shop");
             }
         }
+
+        if (depth >= 999999999)
+        {
+            transform.Translate(new Vector2(0, 5 * Time.deltaTime));
+            if (transform.position.y > 9.5)
+            {
+                SceneManager.LoadScene("Shop");
+            }
+        }
         if (Input.GetAxis("Buttons1") != 0 || Input.GetAxis("Buttons2") != 0)
         {
             transform.Translate(new Vector2(0, -2 * Time.deltaTime));

@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class FishMove : MonoBehaviour
 {
-    [SerializeField] public Sprite image1, image2, image3, image4;
+    [SerializeField] public Sprite image1, image2, image3, image4, image5;
     private Sprite[] images;
     public int direction;
 
@@ -15,12 +15,13 @@ public class FishMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        images = new Sprite[4];
+        images = new Sprite[5];
         images[0] = image1;
         images[1] = image2;
         images[2] = image3;
         images[3] = image4;
-        int num = Random.Range(0, 3);
+        images[4] = image5;
+        int num = Random.Range(0, 5);
         self.GetComponent<SpriteRenderer>().sprite = images[num];
         if (transform.position.x > 0)
         {
@@ -48,12 +49,12 @@ public class FishMove : MonoBehaviour
         if (direction >= 1)
         {
             transform.rotation = new Quaternion(0, 0, 0.08716f, 0.99618f);
-            transform.localScale = new Vector3(0.75f, 0.75f, 1);
+            transform.localScale = new Vector3(4, 4, 1);
         }
         if (direction <= -1)
         {
             transform.rotation = new Quaternion(0, 0, -0.08716f, 0.99619f);
-            transform.localScale = new Vector3(-0.75f, 0.75f, 1);
+            transform.localScale = new Vector3(-4, 4, 1);
         }
 
         transform.Translate(new Vector2(1f * Time.deltaTime * direction, 0.1f * Time.deltaTime));
