@@ -1,5 +1,9 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using static TMPro.TextMeshProUGUI;
 
 public class LineMovement : MonoBehaviour
 {
@@ -9,11 +13,13 @@ public class LineMovement : MonoBehaviour
     [SerializeField] public int maxFish;
     [SerializeField] public int maxDepth;
     [SerializeField] public int fishCount;
-    [SerializeField] private AudioSource bite;
+    [SerializeField] public AudioSource bite;
+    [SerializeField] public TextMeshProUGUI depthDisplay;
     public GameObject self;
     public GameObject singleton;
     public int cashUpgrades;
     public float depth = 0;
+    public float depthMult;
 
     private void Start()
     {
@@ -24,6 +30,7 @@ public class LineMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        depthDisplay.text = Math.Round(depth).ToString();
         xDirection = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime;
         if (transform.position.y > 2.5)
         {
@@ -45,7 +52,7 @@ public class LineMovement : MonoBehaviour
             }
         }
 
-        depth += 1 * Time.deltaTime;
+        depth += 1 * Time.deltaTime * depthMult;
          
         if (depth >= Singleton.Instance.depthUprage * 5 + 30)
         {
@@ -64,20 +71,23 @@ public class LineMovement : MonoBehaviour
                 SceneManager.LoadScene("Shop");
             }
         }
+
+        depthMult = 1f;
         if (Input.GetAxis("Buttons1") != 0 || Input.GetAxis("Buttons2") != 0)
         {
             transform.Translate(new Vector2(0, -2 * Time.deltaTime));
+            depthMult = 1.5f;
         }
 
         if (transform.position.y < 2.5)
         {
             transform.Translate(new Vector2(0, 1 * Time.deltaTime));
         }
+
         if (transform.position.y < .5)
         {
             transform.Translate(new Vector2(0, 1 * Time.deltaTime));
         }
-
 
     }
 

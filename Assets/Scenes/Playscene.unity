@@ -545,10 +545,12 @@ MonoBehaviour:
   maxDepth: 0
   fishCount: 0
   bite: {fileID: 1487255336}
+  depthDisplay: {fileID: 1595665284}
   self: {fileID: 389129980}
   singleton: {fileID: 388639875984800925, guid: 91009dfc5fb7d8847a568c35ff3192ec, type: 3}
   cashUpgrades: 0
   depth: 0
+  depthMult: 0
 --- !u!114 &389129984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,7 +769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Gold
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1270,7 +1272,6 @@ GameObject:
   - component: {fileID: 1595665282}
   - component: {fileID: 1595665285}
   - component: {fileID: 1595665284}
-  - component: {fileID: 1595665283}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1297,20 +1298,6 @@ RectTransform:
   m_AnchoredPosition: {x: 100, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1595665283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595665281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426ebdcfb32ed4f1e8d215e8e0403b2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 0
-  meter: {fileID: 1595665284}
 --- !u!114 &1595665284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,7 +1318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Depth
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

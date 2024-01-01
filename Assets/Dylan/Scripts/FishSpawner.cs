@@ -24,9 +24,10 @@ public class FishCollect : MonoBehaviour
         {
             maxFish = maxFish + 20;
         }
-        
+
+        fishTimer = 2 * Mathf.Exp(-0.001f * (float)Math.Pow(Singleton.Instance.spawnUpgrade, 2f));
         StartCoroutine(FishSpawning());
-        fishTimer = 4 / (Singleton.Instance.spawnUpgrade * .5f);
+        
     }
 
     // Update is called once per frame
